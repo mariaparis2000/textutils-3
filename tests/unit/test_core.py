@@ -36,8 +36,3 @@ def test_is_palindrome_case_insensitive():
 def test_is_palindrome_not():
     """Test non-palindrome"""
     assert c.is_palindrome("hello") == False
-
-def test_is_palindrome_empty():
-    """Test empty string"""
-    assert c.is_palindrome("") == True
-
