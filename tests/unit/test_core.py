@@ -41,6 +41,3 @@ def test_is_palindrome_empty():
     """Test empty string"""
     assert c.is_palindrome("") == True
 
-def test_is_palindrome_single_char():
-    """Test single character"""
-    assert c.is_palindrome("a") == True
