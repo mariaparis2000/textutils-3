@@ -20,4 +20,7 @@ def test_remove_punctuation_none():
     text = "hello world"
     assert c.remove_punctuation(text) == "hello world"
 
+def test_is_palindrome_not():
+    """Test non-palindrome"""
+    assert c.is_palindrome("hello") == False
 
