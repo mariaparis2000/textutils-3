@@ -31,3 +31,7 @@ def test_is_palindrome_basic():
 def test_is_palindrome_with_spaces():
     """Test palindrome with spaces (should ignore)"""
     assert c.is_palindrome("race car") == True
+
+def test_is_palindrome_case_insensitive():
+    """Test that case is ignored"""
+    assert c.is_palindrome("RaceCar") == True
