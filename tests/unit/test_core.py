@@ -24,3 +24,6 @@ def test_is_palindrome_not():
     """Test non-palindrome"""
     assert c.is_palindrome("hello") == False
 
+def test_is_palindrome_basic():
+    """Test basic palindrome"""
+    assert c.is_palindrome("racecar") == True
