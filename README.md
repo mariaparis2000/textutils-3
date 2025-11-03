@@ -23,7 +23,53 @@
 >   ```bash
 >   pip install -e .
 >   ```
->
+>## Development Workflow
+
+This project was developed collaboratively using *feature branches*, with each feature implemented and tested independently in tests/test_core.py. The workflow ensured that every new function was accompanied by corresponding unit tests.  
+
+### Feature Branches and Implementations
+
+- *feat/word-count*  
+  - Implemented word_count(text) to count the frequency of words in a string (case-insensitive, ignores punctuation).  
+  - Corresponding tests in test_core.py:  
+    - test_word_count_basic – basic counting with mixed case  
+    - test_word_count_empty – empty string  
+    - test_word_count_single_word – single word  
+    - test_word_count_with_punctuation – handles punctuation correctly
+
+- *feat/normalize-whitespace*  
+  - Implemented normalize_whitespace(text) to collapse multiple spaces, tabs, and newlines into single spaces, and remove leading/trailing spaces.  
+  - Corresponding tests:  
+    - test_normalize_whitespace_multiple_spaces  
+    - test_normalize_whitespace_leading_trailing  
+    - test_normalize_whitespace_newlines_tabs  
+    - test_normalize_whitespace_complex
+
+- *feat/remove-punctuation*  
+  - Implemented remove_punctuation(text) to remove all punctuation from a string.  
+  - Corresponding tests:  
+    - test_remove_punctuation_basic  
+    - test_remove_punctuation_multiple  
+    - test_remove_punctuation_only_punct  
+    - test_remove_punctuation_none
+
+- *feat/is-palindrome*  
+  - Implemented is_palindrome(text) to check if a string is a palindrome (ignores spaces and case).  
+  - Corresponding tests:  
+    - test_is_palindrome_not – non-palindrome  
+    - test_is_palindrome_basic – basic palindrome  
+    - test_is_palindrome_with_spaces – palindrome with spaces  
+    - test_is_palindrome_case_insensitive – case-insensitive check
+
+## Workflow Notes
+
+1. Each feature was developed in its *own branch*.  
+2. Unit tests for each feature were written in tests/test_core.py *before merging*, ensuring correctness.  
+3. pytest and coverage reports (pytest --cov) were used to verify that all features worked as expected.  
+4. After passing tests, each feature branch was merged into main, keeping the repository stable and testable at all times.  
+
+This workflow promotes *test-driven development*, clear branch isolation, and easy collaboration between multiple developers.
+
 >## Running Tests
 >
 >To run all tests and check coverage:
@@ -57,8 +103,13 @@ Aumkar Wagle (awagle10)
 
 <div class="alert alert-success">
 
-
-# Important learnings
+## Final success criteria
+- Git history shows that all team members contributed to the work
+- Five features are included
+- All tests passed at the end (`pytest -v`)
+- README provides clear instructions
+- Repository is easy to understand and cleaned up
+## Important learnings
 
 - Use a single source of communication (like WhatsApp)
 - Run `pytest` after every change to not run into problems later
