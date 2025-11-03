@@ -43,10 +43,16 @@
 >* `word_count(text)` → counts word frequencies (case-insensitive)
 >* `top_n(counts, n)` → returns the top-N frequent words
 >* `normalize_whitespace(text)` → collapses multiple spaces/newlines into one
+>* 'remove_punctuation(text)' -> removes the punctuation
+>* 'is_palindrome(text)'-> check if the text is a palindrome
 >
 >## Team
 >
 >List the members of your group here with GitHub usernames.
-
+Fabrizio Iacuzio
+Maria Paris
+Maximilian Voss
+Baran Erdogan
+Aumkar Wagle
 
 <div class="alert alert-success">
