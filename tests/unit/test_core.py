@@ -1,5 +1,6 @@
 import textutils.core as c
 
+
 def test_word_count_basic():
     """Test basic word counting with mixed case"""
     text = "Red red BLUE"
