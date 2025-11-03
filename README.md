@@ -109,6 +109,7 @@ Aumkar Wagle (awagle10)
 - All tests passed at the end (`pytest -v`)
 - README provides clear instructions
 - Repository is easy to understand and cleaned up
+
 ## Important learnings
 
 - Use a single source of communication (like WhatsApp)
