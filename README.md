@@ -56,3 +56,11 @@ Baran Erdogan (baranerdogan11)
 Aumkar Wagle (awagle10)
 
 <div class="alert alert-success">
+
+
+# Important learnings
+
+- Use a single source of communication (like WhatsApp)
+- Run `pytest` after every change to not run into problems later
+- Always `git pull` before `git push` to not have synchronisation problems
+- Work together in the same room
