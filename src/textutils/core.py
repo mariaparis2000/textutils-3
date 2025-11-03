@@ -55,6 +55,8 @@ def top_n(counts: dict[str, int], n: int) -> list[tuple[str, int]]:
     # Return top n items
     return sorted_items[:n]
 
+
+
 def remove_punctuation(text: str) -> str:
     """Remove all punctuation from text, keeping letters and spaces.
     
