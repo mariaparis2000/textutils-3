@@ -7,7 +7,9 @@ def normalize_whitespace(text: str) -> str:
     """
     # Split on any whitespace and rejoin with single spaces
     # This automatically handles leading/trailing whitespace
-    return ' '.join(text.split())def word_count(text: str) -> dict[str, int]:
+    return ' '.join(text.split())
+
+def word_count(text: str) -> dict[str, int]:
     """Return a case-insensitive word frequency dict.
     
     Example: 

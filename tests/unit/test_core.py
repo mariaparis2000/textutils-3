@@ -19,7 +19,8 @@ def test_word_count_with_punctuation():
     # This assumes we strip punctuation
     result = c.word_count(text)
     assert "hello" in result
-    assert result["hello"] == 2import textutils.core as c
+    assert result["hello"] == 2
+    
 
 def test_normalize_whitespace_multiple_spaces():
     """Test collapsing multiple spaces"""
