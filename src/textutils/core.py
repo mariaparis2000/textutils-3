@@ -53,4 +53,17 @@ def top_n(counts: dict[str, int], n: int) -> list[tuple[str, int]]:
     sorted_items = sorted(counts.items(), key=lambda item: (-item[1], item[0]))
     
     # Return top n items
-    return sorted_items[:n]
+    return sorted_items[:n]def remove_punctuation(text: str) -> str:
+    """Remove all punctuation from text, keeping letters and spaces.
+    
+    Example:
+        >>> remove_punctuation("Hello, world!")
+        "Hello world"
+    """
+    import string
+    
+    # Remove all punctuation characters
+    text = text.translate(str.maketrans('', '', string.punctuation))
+    
+    # Normalize whitespace (in case punctuation removal created extra spaces)
+    return ' '.join(text.split())
