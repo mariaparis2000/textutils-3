@@ -66,4 +66,21 @@ def top_n(counts: dict[str, int], n: int) -> list[tuple[str, int]]:
     text = text.translate(str.maketrans('', '', string.punctuation))
     
     # Normalize whitespace (in case punctuation removal created extra spaces)
-    return ' '.join(text.split())
+    return ' '.join(text.split())def is_palindrome(text: str) -> bool:
+    """Check if text is a palindrome (ignoring case and spaces).
+    
+    Example:
+        >>> is_palindrome("RaceCar")
+        True
+        >>> is_palindrome("hello")
+        False
+    """
+    # Remove spaces and convert to lowercase
+    cleaned = text.replace(" ", "").lower()
+    
+    # Check if it reads the same forwards and backwards
+    return cleaned == cleaned[::-1]
+
+
+
+
