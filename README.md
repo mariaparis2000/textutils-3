@@ -9,8 +9,8 @@ The main objective is to demonstrate effective teamwork through proper branching
 >
 >1. Clone the repository:
 >   ```bash
->   git clone https://github.com/<owner>/textutils-<team>.git
->   cd textutils-<team>
+>   git clone https://github.com/mariaparis2000/textutils-3.git
+>   cd textutils-3
 >```
 >
 >
