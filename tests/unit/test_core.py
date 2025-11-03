@@ -84,3 +84,20 @@ def test_word_count_simple_merge():
     text = "hello,,world!!!"
     result = c.word_count(text)
     assert result == {"helloworld": 1}
+
+def test_top_n_empty_dict():
+    """Test top_n with empty dictionary (triggers 'if not counts:')"""
+    assert c.top_n({}, 3) == []
+
+def test_top_n_regular_dict():
+    """Test top_n with a normal dictionary (triggers sorting and return)"""
+    counts = {"apple": 2, "banana": 3, "cherry": 1}
+    result = c.top_n(counts, 2)
+    # Sorted by count descending, then alphabetically
+    assert result == [("banana", 3), ("apple", 2)]
+
+def test_top_n_n_greater_than_length():
+    """Test top_n when n > number of items (triggers slicing return)"""
+    counts = {"apple": 2, "banana": 3}
+    result = c.top_n(counts, 5)
+    assert result == [("banana", 3), ("apple", 2)]
