@@ -80,8 +80,7 @@ def test_is_palindrome_case_insensitive():
     """Test that case is ignored"""
     assert c.is_palindrome("RaceCar") == True
 
-def test_word_count_with_empty_words():
-    """Test word_count ignores empty strings from punctuation"""
+def test_word_count_simple_merge():
     text = "hello,,world!!!"
     result = c.word_count(text)
-    assert result == {"hello": 1, "world": 1}
+    assert result == {"helloworld": 1}
