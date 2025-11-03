@@ -15,6 +15,4 @@ packages = ["textutils"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "--cov=src/textutils --cov-report=term-missing --cov-report=html"
-
-[tool.pytest.ini_options]
 pythonpath = "src"
