@@ -5,6 +5,23 @@
 The goal of this project is to collaboratively build a small Python package called textutils while applying the development tools and workflows introduced in class — including Git, VS Code, micromamba, pytest, and coverage.
 The main objective is to demonstrate effective teamwork through proper branching, merging, testing, and conflict resolution rather than creating a complex Python application.
 >
+## Project structure
+textutils-3/
+├── src/
+│   └── textutils/
+│       ├── __init__.py
+│       ├── core.py              # Main feature implementations
+│
+├── tests/
+│   ├── unit/
+│   │   └── test_core.py         # Unit tests for individual functions
+│   └── integration/
+│       └── test_end_to_end.py   # Integration tests across functions
+│
+├── environment.yml              # Environment setup for micromamba
+├── pyproject.toml               # Package configuration
+└── README.md                    # Project documentation
+
 ## Installation
 >
 >1. Clone the repository:
@@ -86,7 +103,12 @@ This workflow promotes *test-driven development*, clear branch isolation, and ea
 >```bash
 >pytest --cov=src/textutils --cov-report=term-missing
 >```
->
+## Testing Coverage & Reliability
+
+All features were tested using `pytest`, covering normal cases, edge cases, and type consistency.  
+The final coverage report showed **100% test coverage** for all implemented functions.  
+In addition to unit tests, integration tests in `tests/integration/test_end_to_end.py` verified the combined behavior of multiple functions (e.g., applying `remove_punctuation` and `word_count` sequentially).
+
 ## Summary of the Features
 >
 * `word_count(text)` → counts word frequencies (case-insensitive)
@@ -94,7 +116,20 @@ This workflow promotes *test-driven development*, clear branch isolation, and ea
 * `normalize_whitespace(text)` → collapses multiple spaces/newlines into one
 * `remove_punctuation(text)` -> removes the punctuation
 * `is_palindrome(text)`-> check if the text is a palindrome
->
+
+## Feature Interactions
+
+While each feature can be used independently, several functions can be combined for text preprocessing pipelines.  
+For example:
+
+```python
+from textutils.core import remove_punctuation, normalize_whitespace, word_count
+
+text = "Hello,   World!\nHello!"
+cleaned = normalize_whitespace(remove_punctuation(text))
+print(word_count(cleaned))
+# {'hello': 2, 'world': 1}
+
 ## Team members (Name, Institution, GitHub-Username)
 
 - Fabrizio Iacuzio, ESADE (@FabrizioIacuzio)
