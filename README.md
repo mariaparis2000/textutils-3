@@ -89,11 +89,11 @@ This workflow promotes *test-driven development*, clear branch isolation, and ea
 >
 ## Summary of the Features
 >
->* `word_count(text)` → counts word frequencies (case-insensitive)
->* `top_n(counts, n)` → returns the top-N frequent words
->* `normalize_whitespace(text)` → collapses multiple spaces/newlines into one
->* `remove_punctuation(text)` -> removes the punctuation
->* `is_palindrome(text)`-> check if the text is a palindrome
+* `word_count(text)` → counts word frequencies (case-insensitive)
+* `top_n(counts, n)` → returns the top-N frequent words
+* `normalize_whitespace(text)` → collapses multiple spaces/newlines into one
+* `remove_punctuation(text)` -> removes the punctuation
+* `is_palindrome(text)`-> check if the text is a palindrome
 >
 ## Team members (Name, Institution, GitHub-Username)
 
