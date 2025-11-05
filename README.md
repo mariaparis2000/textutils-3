@@ -26,7 +26,7 @@ The main objective is to demonstrate effective teamwork through proper branching
 >   ```bash
 >   pip install -e .
 >   ```
->## Development Workflow
+## Development Workflow
 
 This project was developed collaboratively using *feature branches*, with each feature implemented and tested independently in tests/test_core.py. The workflow ensured that every new function was accompanied by corresponding unit tests.  
 
@@ -73,7 +73,7 @@ This project was developed collaboratively using *feature branches*, with each f
 
 This workflow promotes *test-driven development*, clear branch isolation, and easy collaboration between multiple developers.
 
->## Running Tests
+## Running Tests
 >
 >To run all tests and check coverage:
 >
@@ -87,7 +87,7 @@ This workflow promotes *test-driven development*, clear branch isolation, and ea
 >pytest --cov=src/textutils --cov-report=term-missing
 >```
 >
->## Features
+>## Summary of the Features
 >
 >* `word_count(text)` → counts word frequencies (case-insensitive)
 >* `top_n(counts, n)` → returns the top-N frequent words
