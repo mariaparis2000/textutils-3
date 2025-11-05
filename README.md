@@ -87,7 +87,7 @@ This workflow promotes *test-driven development*, clear branch isolation, and ea
 >pytest --cov=src/textutils --cov-report=term-missing
 >```
 >
->## Summary of the Features
+## Summary of the Features
 >
 >* `word_count(text)` → counts word frequencies (case-insensitive)
 >* `top_n(counts, n)` → returns the top-N frequent words
