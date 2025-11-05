@@ -7,6 +7,7 @@ The main objective is to demonstrate effective teamwork through proper branching
 >
 ## Project structure
 
+```plaintext
 textutils-3/
 ├── src/
 │   └── textutils/
@@ -22,6 +23,7 @@ textutils-3/
 ├── environment.yml                # Environment setup for micromamba
 ├── pyproject.toml                 # Package configuration
 └── README.md                      # Project documentation
+```
 
 ## Installation
 >
