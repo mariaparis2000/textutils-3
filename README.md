@@ -95,13 +95,13 @@ This workflow promotes *test-driven development*, clear branch isolation, and ea
 >* `remove_punctuation(text)` -> removes the punctuation
 >* `is_palindrome(text)`-> check if the text is a palindrome
 >
->## Team members (Name, Institution, GitHub-Username)
->
-Fabrizio Iacuzio, ESADE (FabrizioIacuzio)
-Maria Paris, ESADE (mariaparis2000)
-Maximilian Voss, ESADE (Maxv-svg)
-Baran Erdogan, ESADE (baranerdogan11)
-Aumkar Wagle, ESADE (awagle10)
+## Team members (Name, Institution, GitHub-Username)
+
+- Fabrizio Iacuzio, ESADE (@FabrizioIacuzio)
+- Maria Paris, ESADE (@mariaparis2000)
+- Maximilian Voss, ESADE (@Maxv-svg)
+- Baran Erdogan, ESADE (@baranerdogan11)
+- Aumkar Wagle, ESADE (@awagle10)
 
 ## Final success criteria
 - Git history shows that all team members contributed to the work
