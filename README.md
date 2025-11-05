@@ -6,21 +6,22 @@ The goal of this project is to collaboratively build a small Python package call
 The main objective is to demonstrate effective teamwork through proper branching, merging, testing, and conflict resolution rather than creating a complex Python application.
 >
 ## Project structure
+
 textutils-3/
 ├── src/
 │   └── textutils/
-│       ├── __init__.py
-│       ├── core.py              # Main feature implementations
+│       ├── __init__.py            # Package initialization
+│       └── core.py                # Main feature implementations
 │
 ├── tests/
 │   ├── unit/
-│   │   └── test_core.py         # Unit tests for individual functions
+│   │   └── test_core.py           # Unit tests for individual functions
 │   └── integration/
-│       └── test_end_to_end.py   # Integration tests across functions
+│       └── test_end_to_end.py     # Integration tests across features
 │
-├── environment.yml              # Environment setup for micromamba
-├── pyproject.toml               # Package configuration
-└── README.md                    # Project documentation
+├── environment.yml                # Environment setup for micromamba
+├── pyproject.toml                 # Package configuration
+└── README.md                      # Project documentation
 
 ## Installation
 >
@@ -119,7 +120,7 @@ In addition to unit tests, integration tests in `tests/integration/test_end_to_e
 
 ## Feature Interactions
 
-While each feature can be used independently, several functions can be combined for text preprocessing pipelines.  
+While each function can be used independently, they can also be combined to form simple text processing pipelines.  
 For example:
 
 ```python
@@ -129,8 +130,8 @@ text = "Hello,   World!\nHello!"
 cleaned = normalize_whitespace(remove_punctuation(text))
 print(word_count(cleaned))
 # {'hello': 2, 'world': 1}
-
-## Team members (Name, Institution, GitHub-Username)
+```
+## Team Members (Name, Institution, GitHub-Username)
 
 - Fabrizio Iacuzio, ESADE (@FabrizioIacuzio)
 - Maria Paris, ESADE (@mariaparis2000)
@@ -139,6 +140,7 @@ print(word_count(cleaned))
 - Aumkar Wagle, ESADE (@awagle10)
 
 ## Final success criteria
+
 - Git history shows that all team members contributed to the work
 - Five features are included
 - All tests passed at the end (`pytest -v`)
