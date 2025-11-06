@@ -30,7 +30,9 @@ textutils-3/
 ```
 
 ## Installation
->
+
+---
+
 >1. Clone the repository:
 >   ```bash
 >   git clone https://github.com/mariaparis2000/textutils-3.git
@@ -52,9 +54,13 @@ textutils-3/
 >   ```
 ## Development Workflow
 
+---
+
 This project was developed collaboratively using *feature branches*, with each feature implemented and tested independently in tests/test_core.py. The workflow ensured that every new function was accompanied by corresponding unit tests.  
 
 ### Feature Branches and Implementations
+
+---
 
 - *feat/word-count*  
   - Implemented word_count(text) to count the frequency of words in a string (case-insensitive, ignores punctuation).  
@@ -90,6 +96,8 @@ This project was developed collaboratively using *feature branches*, with each f
 
 ## Workflow Notes
 
+---
+
 1. Each feature was developed in its *own branch*.  
 2. Unit tests for each feature were written in tests/test_core.py *before merging*, ensuring correctness.  
 3. pytest and coverage reports (pytest --cov) were used to verify that all features worked as expected.  
@@ -98,7 +106,9 @@ This project was developed collaboratively using *feature branches*, with each f
 This workflow promotes *test-driven development*, clear branch isolation, and easy collaboration between multiple developers.
 
 ## Running Tests
->
+
+---
+
 >To run all tests and check coverage:
 >
 >```bash
@@ -112,12 +122,16 @@ This workflow promotes *test-driven development*, clear branch isolation, and ea
 >```
 ## Testing Coverage & Reliability
 
+---
+
 All features were tested using `pytest`, covering normal cases, edge cases, and type consistency.  
 The final coverage report showed **100% test coverage** for all implemented functions.  
 In addition to unit tests, integration tests in `tests/integration/test_end_to_end.py` verified the combined behavior of multiple functions (e.g., applying `remove_punctuation` and `word_count` sequentially).
 
 ## Summary of the Features
->
+
+---
+
 * `word_count(text)` → counts word frequencies (case-insensitive)
 * `top_n(counts, n)` → returns the top-N frequent words
 * `normalize_whitespace(text)` → collapses multiple spaces/newlines into one
@@ -125,6 +139,8 @@ In addition to unit tests, integration tests in `tests/integration/test_end_to_e
 * `is_palindrome(text)`-> check if the text is a palindrome
 
 ## Feature Interactions
+
+---
 
 While each function can be used independently, they can also be combined to form simple text processing pipelines.  
 For example:
@@ -139,6 +155,8 @@ print(word_count(cleaned))
 ```
 ## Team Members (Name, Institution, GitHub-Username)
 
+---
+
 - Fabrizio Iacuzio, ESADE (@FabrizioIacuzio)
 - Maria Paris, ESADE (@mariaparis2000)
 - Maximilian Voss, ESADE (@Maxv-svg)
@@ -146,6 +164,8 @@ print(word_count(cleaned))
 - Aumkar Wagle, ESADE (@awagle10)
 
 ## Final success criteria
+
+---
 
 - Git history shows that all team members contributed to the work
 - Five features are included
@@ -155,6 +175,8 @@ print(word_count(cleaned))
 
 ## Important learnings
 
+---
+
 - Use a single source of communication (like WhatsApp)
 - Run `pytest` after every change to not run into problems later
 - Always `git pull` before `git push` to not have synchronisation problems
@@ -162,9 +184,10 @@ print(word_count(cleaned))
 
 # Challenges & Troubleshooting
 
+---
+
 Below are some of the main challenges we encountered during development — as well as common issues other groups might face — with short explanations and fixes.
 
----
 
 ### 1) `pip install -e .` fails with “setup.py not found”
 **Why:** Outdated `pip/setuptools` or not using PEP 517 builds (the project uses `pyproject.toml` with Hatch).  
@@ -174,8 +197,6 @@ Below are some of the main challenges we encountered during development — as w
 python -m pip install --upgrade pip setuptools wheel
 pip install -e .
 ```
-
----
 
 ### 2) Tests can’t import the package (`ModuleNotFoundError: textutils`)
 **Why:** The `src/` layout wasn’t installed properly or the wrong environment was active.  
@@ -189,8 +210,6 @@ pytest -q
 
 Make sure to run `pytest` from the repository root.
 
----
-
 ### 3) Pytest collects 0 tests or throws ImportError
 **Checklist:**
 - `src/textutils/__init__.py` exists  
@@ -203,8 +222,6 @@ Make sure to run `pytest` from the repository root.
   ```
 
 - File names start with `test_`
-
----
 
 ### 4) Teammates’ code not visible after merging
 **Why:** Local branch is behind `origin/main`.  
@@ -223,8 +240,6 @@ git add <files>
 git rebase --continue
 ```
 
----
-
 ### 5) Environment or dependency issues
 **Symptom:** Imports fail, `pytest` not found, or different Python versions between teammates.  
 **Fix:**
@@ -237,8 +252,6 @@ pytest
 ```
 
 Always use the shared `environment.yml` file to stay consistent.
-
----
 
 ### 6) Merge conflicts or sync problems
 **Tips:**
@@ -255,5 +268,3 @@ Always use the shared `environment.yml` file to stay consistent.
   ```
   git log --oneline --graph --decorate --all
   ```
-
----
