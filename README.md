@@ -2,10 +2,14 @@
 >
   ## Goals of the project
 
+---
+
 The goal of this project is to collaboratively build a small Python package called textutils while applying the development tools and workflows introduced in class — including Git, VS Code, micromamba, pytest, and coverage.
 The main objective is to demonstrate effective teamwork through proper branching, merging, testing, and conflict resolution rather than creating a complex Python application.
 >
 ## Project structure
+
+---
 
 ```plaintext
 textutils-3/
