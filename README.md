@@ -155,3 +155,101 @@ print(word_count(cleaned))
 - Run `pytest` after every change to not run into problems later
 - Always `git pull` before `git push` to not have synchronisation problems
 - Work together in the same room
+
+# Challenges & Troubleshooting
+
+Below are some of the main challenges we encountered during development — as well as common issues other groups might face — with short explanations and fixes.
+
+---
+
+### 1) `pip install -e .` fails with “setup.py not found”
+**Why:** Outdated `pip/setuptools` or not using PEP 517 builds (the project uses `pyproject.toml` with Hatch).  
+**Fix:**
+
+```
+python -m pip install --upgrade pip setuptools wheel
+pip install -e .
+```
+
+---
+
+### 2) Tests can’t import the package (`ModuleNotFoundError: textutils`)
+**Why:** The `src/` layout wasn’t installed properly or the wrong environment was active.  
+**Fix:**
+
+```
+micromamba activate textutils
+pip install -e .
+pytest -q
+```
+
+Make sure to run `pytest` from the repository root.
+
+---
+
+### 3) Pytest collects 0 tests or throws ImportError
+**Checklist:**
+- `src/textutils/__init__.py` exists  
+- Run tests from repo root (`pytest`)  
+- In `pyproject.toml`:
+
+  ```
+  [tool.pytest.ini_options]
+  testpaths = ["tests"]
+  ```
+
+- File names start with `test_`
+
+---
+
+### 4) Teammates’ code not visible after merging
+**Why:** Local branch is behind `origin/main`.  
+**Fix:**
+
+```
+git fetch origin
+git switch main
+git pull --rebase origin main
+```
+
+If conflicts appear:
+
+```
+git add <files>
+git rebase --continue
+```
+
+---
+
+### 5) Environment or dependency issues
+**Symptom:** Imports fail, `pytest` not found, or different Python versions between teammates.  
+**Fix:**
+
+```
+micromamba env list
+micromamba activate textutils
+pip install -e .
+pytest
+```
+
+Always use the shared `environment.yml` file to stay consistent.
+
+---
+
+### 6) Merge conflicts or sync problems
+**Tips:**
+- Always `git pull --rebase` before pushing  
+- Keep feature branches small  
+- Resolve conflicts manually, then  
+
+  ```
+  git rebase --continue
+  ```
+
+- Check history with:
+
+  ```
+  git log --oneline --graph --decorate --all
+  ```
+
+---
